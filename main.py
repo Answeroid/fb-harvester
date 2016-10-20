@@ -1,21 +1,25 @@
 from selenium import webdriver
+from fb_auth import auth
+from logger import Logger
 
 
 def main():
     # TODO add possibility to login to different FB accounts (use csv file to store them)
     # TODO handle all exceptions especially when account was blocked
-    # TODO add possibility to grab users to find from data/*.csv
+    # TODO save automatic screenshots from time to time
+    # TODO add native system logger from previous log parser project
 
+    log = Logger()
+    log.instance()
+
+    log.debug("asdadsasd")
 
     driver = webdriver.PhantomJS("/home/vkhalin/node_modules/phantomjs-prebuilt/bin/phantomjs")
     driver.get('https://www.facebook.com/')
-    b = driver.find_elements_by_class_name("inputtext")
-    c = driver.find_elements_by_css_selector("#email")
-    email = c[0]
-    email.click()
-    email.send_keys("AZAZAZAZAZAAZAZ")
-    z = 1
 
+    auth(driver, log)
+
+    a = 1
 
 if __name__ == '__main__':
     main()
