@@ -10,6 +10,6 @@ class Logger:
     def instance():
         """
         Creates logger instance
-        :return: returts newly created logger instance
+        :return: returns newly created logger instance
         """
         return logging.getLogger()
