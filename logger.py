@@ -7,7 +7,7 @@ class Logger:
         fileConfig('data/logger.ini')
 
     @staticmethod
-    def instance():
+    def get_instance():
         """
         Creates logger instance
         :return: returns newly created logger instance
