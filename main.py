@@ -2,6 +2,11 @@ from selenium import webdriver
 
 
 def main():
+    # TODO add possibility to login to different FB accounts (use csv file to store them)
+    # TODO handle all exceptions especially when account was blocked
+    # TODO add possibility to grab users to find from data/*.csv
+
+
     driver = webdriver.PhantomJS("/home/vkhalin/node_modules/phantomjs-prebuilt/bin/phantomjs")
     driver.get('https://www.facebook.com/')
     b = driver.find_elements_by_class_name("inputtext")
