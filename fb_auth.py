@@ -6,8 +6,11 @@ def auth(driver, logger):
     :return:
     """
     # TODO add possibility to grab users to find from data/*.csv
-    with open("data/creds.csv", "r") as file_:
-        pass
+    try:
+        with open("data/creds.csv", "r") as file_:
+            pass
+    except Exception as e:
+        logger.debug(e)
 
     login = "login"
     passw = "password"
@@ -19,7 +22,7 @@ def auth(driver, logger):
         password = driver.find_element_by_css_selector("#pass")
         password.send_keys(str(passw))
 
-        submit = driver.find_element_by_css_selector("#loginbutton")
+        submit = driver.find_element_by_css_selector("#loginasd")
         submit.click()
     except Exception as e:
-        print logger.debug(e.msg)
+        print logger.debug(e)
