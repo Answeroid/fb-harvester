@@ -9,10 +9,8 @@ def main():
     # TODO save automatic screenshots from time to time
     # TODO add native system logger from previous log parser project
 
-    log = Logger()
-    log.instance()
-
-    log.debug("asdadsasd")
+    instance = Logger()
+    log = instance.get_instance()
 
     driver = webdriver.PhantomJS("/home/vkhalin/node_modules/phantomjs-prebuilt/bin/phantomjs")
     driver.get('https://www.facebook.com/')
