@@ -22,7 +22,7 @@ def auth(driver, logger):
         password = driver.find_element_by_css_selector("#pass")
         password.send_keys(str(passw))
 
-        submit = driver.find_element_by_css_selector("#loginasd")
+        submit = driver.find_element_by_css_selector("#loginbutton")
         submit.click()
     except Exception as e:
         print logger.debug(e)

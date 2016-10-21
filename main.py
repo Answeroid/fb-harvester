@@ -12,7 +12,7 @@ def main():
     instance = Logger()
     log = instance.get_instance()
 
-    driver = webdriver.PhantomJS("/home/vkhalin/node_modules/phantomjs-prebuilt/bin/phantomjs")
+    driver = webdriver.PhantomJS("/home/username/node_modules/phantomjs-prebuilt/bin/phantomjs")
     driver.get('https://www.facebook.com/')
 
     auth(driver, log)
